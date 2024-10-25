@@ -4,15 +4,13 @@ class Book {
   String author;
   Book(this.name, this.price, this.author);
 
-  void detail() {
-    print("Book Name: $name");
-    print("Book Price: $price");
-    print("Author Name: $author");
+  @override
+  String toString() {
+    return 'Book(Book name: $name, Book Price: $price, Author: $author)';
   }
 }
 
 void main() {
   Book m = Book("Java", 890, "jjj");
-  m.detail();
   print(m);
 }
