@@ -2,15 +2,22 @@ class Book {
   String name;
   int price;
   String author;
-  Book(this.name, this.price, this.author);
-
+  // constructor
+  Book({
+    required this.name, // Required Parameter
+    this.price = 200, // Default Value
+    required this.author,
+  });
+// to String method
   @override
   String toString() {
-    return 'Book(Book name: $name, Book Price: $price, Author: $author)';
+    return 'Book(Book Name: $name, Book Price: $price, Author: $author)';
   }
 }
 
 void main() {
-  Book m = Book("Java", 890, "jjj");
+  //Class calling
+  Book m = Book(name: 'Java', author: 'jjj');
+  // where m is instance of class
   print(m);
 }
