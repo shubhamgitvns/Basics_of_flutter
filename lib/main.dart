@@ -1,23 +1,35 @@
-class Book {
+class A {
   String name;
-  int price;
-  String author;
-  // constructor
-  Book({
-    required this.name, // Required Parameter
-    this.price = 200, // Default Value
-    required this.author,
-  });
-// to String method
-  @override
+  void f1() {
+    print("f1() in a");
+  }
+
+  void f2() {
+    print("f2() in a");
+  }
+
+  A(this.name);
   String toString() {
-    return 'Book(Book Name: $name, Book Price: $price, Author: $author)';
+    return "$name";
+  }
+}
+
+class B extends A {
+  String post;
+
+  void f2() {
+    print("f2() in b");
+  }
+
+  B(name, this.post) : super(name);
+  String toString() {
+    return "$name,$post";
   }
 }
 
 void main() {
-  //Class calling
-  Book m = Book(name: 'Java', author: 'jjj');
-  // where m is instance of class
-  print(m);
+  A x1 = A('Popat');
+  x1.f2();
+  x1 = B('Popat', "Ustad");
+  x1.f2();
 }
