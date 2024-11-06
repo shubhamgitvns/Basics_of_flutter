@@ -1,51 +1,39 @@
-class Person {
+class A {
   String name;
-  int age;
-  String address;
-  String mob_number;
-  // constructor
-  Person({
-    required this.name, // Required Parameter
-    required this.age, // Required Parameter
-    required this.address,
-    required this.mob_number,
-  });
-// to String method
-  @override
+  void f1() {
+    print("f1() in a");
+  }
+
+  void f2() {
+    print("f2() in a");
+  }
+
+  void calculateArea(int length, int width) {
+    print('Area is ${length * width}');
+  }
+
+  A(this.name);
   String toString() {
-    return 'Person(Name: $name, Age: $age, Address: $address, Number: $mob_number)';
+    return "$name";
   }
 }
 
-class Employee extends Person {
+class B extends A {
   String post;
-  int salary;
 
-  //Person({required super.name, required super.age, required super.address, required super.mob_number});
+  void f2() {
+    print("f2() in b");
+  }
 
-  Employee(
-      {required name,
-      required age,
-      required address,
-      required mob_number,
-      required this.post,
-      required this.salary})
-      : super(name: name, age: age, address: address, mob_number: mob_number);
-  @override
+  B(name, this.post) : super(name);
   String toString() {
-    return '${super.toString()},Employee(Post: $post, Salary: $salary)';
+    return "$name,$post";
   }
 }
 
 void main() {
-  //Class calling
-  Person x2 = Employee(
-      name: 'Shubham',
-      age: 22,
-      address: "j1/112b",
-      mob_number: "9066854367",
-      post: 'ceo',
-      salary: 6887);
-  // where m is instance of class
-  print(x2);
+  A x1 = A('Popat');
+  x1.f2();
+  x1 = B('Popat', "Ustad");
+  x1.f2();
 }
