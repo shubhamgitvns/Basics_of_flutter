@@ -18,6 +18,11 @@ void main() {
   for (String items in items) {
     print(items);
   }
-  var len = items.indexed;
-  print(len);
+  print("Add item in the list");
+  items.add('E');
+  for (String items in items) {
+    print(items);
+  }
+
+  //print(len);
 }
