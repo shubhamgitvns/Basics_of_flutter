@@ -18,6 +18,6 @@ void main() {
   for (String items in items) {
     print(items);
   }
-  var len = items.runtimeType;
+  var len = items.indexed;
   print(len);
 }
