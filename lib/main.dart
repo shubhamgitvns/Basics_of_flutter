@@ -1,10 +1,23 @@
-void main() {
-  add(a: 4, b: 5);
-  add();
-  add(a: 9);
-  add(b: 8);
+class Person {
+  String name;
+  String address;
+  String number;
+
+  Person({required this.name, required this.address, required this.number});
+  @override
+  String toString() {
+    return 'Person(Name:$name, Number:$number, Address:$address)';
+  }
 }
 
-void add({int a = 1, int b = 2}) {
-  print(a + b);
+void main() {
+  Person p = Person(name: 'shubham', address: 'varanasi', number: '132435363');
+  print(p);
+
+  List<String> items = ['A', 'B', 'C', 'D'];
+  for (String items in items) {
+    print(items);
+  }
+  var len = items.length;
+  print(len);
 }
