@@ -11,18 +11,19 @@ class Person {
 }
 
 void main() {
-  Person p = Person(name: 'shubham', address: 'varanasi', number: '132435363');
-  print(p);
+  Map<String, String> fruits = {
+    "Apple": "Red",
+    "Banana": "Yellow",
+    "Cherry": "Red",
+    "Date": "Brown",
+    "Fig": "Purple",
+    "Grapes": "Green",
+    "Mango": "Orange",
+  };
 
-  List<String> items = ['A', 'B', 'C', 'D'];
-  for (String items in items) {
-    print(items);
+  // Using a for loop to print each key-value pair
+  for (var entry in fruits.entries) {
+    print("${entry.key} is ${entry.value}");
   }
-  print("Remove item in the list");
-  items.remove('C');
-  for (String items in items) {
-    print(items);
-  }
-
-  //print(len);
+  print(fruits["Fig"]);
 }
