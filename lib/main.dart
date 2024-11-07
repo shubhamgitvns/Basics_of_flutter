@@ -18,6 +18,6 @@ void main() {
   for (String items in items) {
     print(items);
   }
-  var len = items.reversed;
+  var len = items.runtimeType;
   print(len);
 }
