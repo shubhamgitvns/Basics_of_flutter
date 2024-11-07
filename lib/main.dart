@@ -11,19 +11,14 @@ class Person {
 }
 
 void main() {
-  Map<String, String> fruits = {
-    "Apple": "Red",
-    "Banana": "Yellow",
-    "Cherry": "Red",
-    "Date": "Brown",
-    "Fig": "Purple",
-    "Grapes": "Green",
-    "Mango": "Orange",
+  Map<String, Person> fruits = {
+    "shubham":
+        Person(name: 'Shubham', address: 'Varanasi', number: '9044687654'),
   };
 
   // Using a for loop to print each key-value pair
   for (var entry in fruits.entries) {
     print("${entry.key} is ${entry.value}");
   }
-  print(fruits["Fig"]);
+  print(fruits["shubham"]);
 }
