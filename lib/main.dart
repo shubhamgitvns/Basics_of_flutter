@@ -18,8 +18,8 @@ void main() {
   for (String items in items) {
     print(items);
   }
-  print("Add item in the list");
-  items.add('E');
+  print("Remove item in the list");
+  items.remove('C');
   for (String items in items) {
     print(items);
   }
