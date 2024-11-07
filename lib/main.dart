@@ -18,6 +18,6 @@ void main() {
   for (String items in items) {
     print(items);
   }
-  var len = items.length;
+  var len = items.reversed;
   print(len);
 }
